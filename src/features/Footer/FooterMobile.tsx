@@ -8,20 +8,19 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
-
+//esto iba en heading pero hay un error de tipo fontWeight: theme.typography.fontWeightRegular,
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       width: "100%",
-      backgroundColor: "#3a1313",
+      backgroundColor: "#26105C",
       color: "#fff",
     },
     heading: {
       fontSize: theme.typography.pxToRem(15),
-      fontWeight: theme.typography.fontWeightRegular,
     },
     accordion: {
-      backgroundColor: "#3a1313",
+      backgroundColor: "#895BF5",
       color: "#fff",
     },
   })
@@ -37,15 +36,12 @@ export default function FooterMobile() {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography variant="h6">Nuestra comida</Typography>
+          <Typography variant="h6">Nuestros servicios</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <List dense>
             <ListItem>
-              <ListItemText>Los más vendidos</ListItemText>
-            </ListItem>
-            <ListItem>
-              <ListItemText>Menú del día</ListItemText>
+              <ListItemText>Servicios destacados</ListItemText>
             </ListItem>
             <ListItem>
               <ListItemText>Ofertas</ListItemText>
@@ -68,9 +64,6 @@ export default function FooterMobile() {
           <List dense>
             <ListItem>
               <ListItemText>Nuestra historia</ListItemText>
-            </ListItem>
-            <ListItem>
-              <ListItemText>Nuestro proceso de elaboración</ListItemText>
             </ListItem>
             <ListItem>
               <ListItemText>Trabaja con nosotros</ListItemText>
@@ -96,25 +89,6 @@ export default function FooterMobile() {
             </ListItem>
             <ListItem>
               <ListItemText>Preguntas frecuentes</ListItemText>
-            </ListItem>
-          </List>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion className={classes.accordion}>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon htmlColor="#fff" />}
-          aria-controls="panel4-content"
-          id="panel4-header"
-        >
-          <Typography variant="h6">Nutrición</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <List dense>
-            <ListItem>
-              <ListItemText>Información nutricional</ListItemText>
-            </ListItem>
-            <ListItem>
-              <ListItemText>Alergenos</ListItemText>
             </ListItem>
           </List>
         </AccordionDetails>

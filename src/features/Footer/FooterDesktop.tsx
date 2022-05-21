@@ -4,24 +4,31 @@ import Typography from "@material-ui/core/Typography";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
+import Link, { LinkProps } from "@mui/material/Link";
+import { styled } from "@mui/material/styles";
 
+const CustomLink = styled(Link)<LinkProps>(({ theme }) => ({
+  color: "white",
+}));
 export default function FooterDesktop() {
   return (
     <>
       <Grid item xs={12} sm={2}>
-        <Typography variant="h6">Nuestra comida</Typography>
+        <Typography variant="h6">Nuestros servicios</Typography>
         <List dense>
           <ListItem>
-            <ListItemText>Los más vendidos</ListItemText>
+            <ListItemText>
+              <CustomLink href="/servicios" underline="hover">
+                Servicios destacados
+              </CustomLink>
+            </ListItemText>
           </ListItem>
           <ListItem>
-            <ListItemText>Menú del día</ListItemText>
-          </ListItem>
-          <ListItem>
-            <ListItemText>Ofertas</ListItemText>
-          </ListItem>
-          <ListItem>
-            <ListItemText>Cupones</ListItemText>
+            <ListItemText>
+              <CustomLink href="#" underline="hover">
+                Ofertas
+              </CustomLink>
+            </ListItemText>
           </ListItem>
         </List>
       </Grid>
@@ -29,13 +36,18 @@ export default function FooterDesktop() {
         <Typography variant="h6">Sobre Nosotros</Typography>
         <List dense>
           <ListItem>
-            <ListItemText>Nuestra historia</ListItemText>
+            <ListItemText>
+              <CustomLink href="/nuestra-historia" underline="hover">
+                Nuestra historia
+              </CustomLink>
+            </ListItemText>
           </ListItem>
           <ListItem>
-            <ListItemText>Nuestro proceso de elaboración</ListItemText>
-          </ListItem>
-          <ListItem>
-            <ListItemText>Trabaja con nosotros</ListItemText>
+            <ListItemText>
+              <CustomLink href="trabaja-con-nosotros" underline="hover">
+                Trabaja con nosotros
+              </CustomLink>
+            </ListItemText>
           </ListItem>
         </List>
       </Grid>
@@ -43,10 +55,11 @@ export default function FooterDesktop() {
         <Typography variant="h6">Contacta con nosotros</Typography>
         <List dense>
           <ListItem>
-            <ListItemText>Encuentranos</ListItemText>
-          </ListItem>
-          <ListItem>
-            <ListItemText>Contacta con nosotros</ListItemText>
+            <ListItemText>
+              <CustomLink href="/contacto" underline="hover">
+                Contacta con nosotros
+              </CustomLink>
+            </ListItemText>
           </ListItem>
           <ListItem>
             <ListItemText>Preguntas frecuentes</ListItemText>
@@ -55,19 +68,14 @@ export default function FooterDesktop() {
       </Grid>
 
       <Grid item xs={12} sm={2}>
-        <Typography variant="h6">Nutrición</Typography>
-        <List dense>
-          <ListItem>
-            <ListItemText>Información nutricional</ListItemText>
-          </ListItem>
-          <ListItem>
-            <ListItemText>Alergenos</ListItemText>
-          </ListItem>
-        </List>
         <Typography variant="h6">Políticas</Typography>
         <List dense>
           <ListItem>
-            <ListItemText>Política de Privacidad</ListItemText>
+            <ListItemText>
+              <CustomLink href="/politicas-de-privacidad" underline="hover">
+                Política de Privacidad
+              </CustomLink>
+            </ListItemText>
           </ListItem>
           <ListItem>
             <ListItemText>Uso de Cookies</ListItemText>
